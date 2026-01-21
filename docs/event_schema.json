@@ -1,1 +1,55 @@
+{
+  "type": "struct",
+  "name": "Event",
+  "fields": [
+    {
+      "name": "event_id",
+      "type": "string",
+      "nullable": false,
+      "metadata": {
+        "description": "Unique identifier for the event"
+      }
+    },
+    {
+      "name": "event_type",
+      "type": "string",
+      "nullable": false,
+      "metadata": {
+        "description": "Type of business event (e.g. order_created, payment_processed)"
+      }
+    },
+    {
+      "name": "event_time",
+      "type": "timestamp",
+      "nullable": false,
+      "metadata": {
+        "description": "Time when the event occurred at source"
+      }
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "nullable": false,
+      "metadata": {
+        "description": "Producing system or service"
+      }
+    },
+    {
+      "name": "payload",
+      "type": "string",
+      "nullable": false,
+      "metadata": {
+        "description": "Raw event payload as JSON string"
+      }
+    },
+    {
+      "name": "ingestion_time",
+      "type": "timestamp",
+      "nullable": false,
+      "metadata": {
+        "description": "Time when event was ingested into the platform"
+      }
+    }
+  ]
+}
 
